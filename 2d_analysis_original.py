@@ -192,12 +192,12 @@ class Load:
         self.name = "Load" + str(number2)
         self.col1, self.col2, self.col3 = st.columns(3)
         with self.col1:
-            self.magnitude = float(st.text_input('Load [kN]', value=0, key=str(number2)))
+            self.magnitude = float(st.text_input('Load [kN]', value=0, key=str(number2 + 0.25)))
         with self.col2:
-            self.node = int(st.text_input('Applied at node #', value = 1, key = str(number2)))
+            self.node = int(st.text_input('Applied at node #', value = 1, key = str(number2 + 0.6809234)))
 
         with self.col3:
-            self.orientation = st.selectbox("Orientation: ", ('Horizontal', 'Vertical', 'Moment'), key = str(number2))
+            self.orientation = st.selectbox("Orientation: ", ('Horizontal', 'Vertical', 'Moment'), key = str(number2 + 4124))
 
         if self.orientation == 'Horizontal':
             self.dof = nodes[int(self.node)-1].dof[0]
