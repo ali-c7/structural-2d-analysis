@@ -217,13 +217,13 @@ class MemberLoad:
         self.name = "Load" + str(number7)
         self.col1, self.col2, self.col3, self.col4 = st.columns(4)
         with self.col1:
-            self.magnitude = float(st.text_input('Load [kN]', value=0, key="member load" + str(number7)))
+            self.magnitude = float(st.text_input('Load [kN]', value=0, key="member load" + str(number7 + 0.123)))
         with self.col2:
-            self.member_id = int(st.text_input('Applied at member #', value = 1, key = "member load" + str(number7)))
+            self.member_id = int(st.text_input('Applied at member #', value = 1, key = "member load" + str(number7 + 0.456)))
         with self.col3:
-            self.distance = float(st.text_input('Distance along member', value =1, key = "member load" + str(number7)))
+            self.distance = float(st.text_input('Distance along member', value =1, key = "member load" + str(number7 + 0.789)))
         with self.col4:
-            self.orientation = st.selectbox("Load type ", ('Point Load [kN]', 'UDL [kN/m]', 'Moment [kN*m]'), key = "member load" + str(number7))
+            self.orientation = st.selectbox("Load type ", ('Point Load [kN]', 'UDL [kN/m]', 'Moment [kN*m]'), key = "member load1.05" + str(number7 + 0.101112))
 
         self.label = st.sidebar.markdown("Load applied on member #" + str(self.member_id))
 
